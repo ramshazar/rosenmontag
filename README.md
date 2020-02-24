@@ -106,6 +106,6 @@ This is a question for Future-Matthias ¯\_(ツ)_/¯
 
 Awesome! I would love to read about that! 
 
-# What das Rosenmontag mean
+# What does Rosenmontag mean
 
 It is [Rosenmontag](https://en.wikipedia.org/wiki/Rosenmontag) today.
