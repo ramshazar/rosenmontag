@@ -3,8 +3,8 @@ Supply chain attack proof of concept using ADD in a Dockerfile and a malicious n
 
 # What is this about
 
-We all know that curl-pipe-sudo-bash is a thing. Many think it is a bad thing. But we all use Docker now so this is not a problem any more.
-In preparation for a talk I was thinking about ways to attack supply chains in Kubernetes or Docker environments. That was when I remembered when I learned that ADD in Dockerfiles lets you [copy files from remote URLs](https://docs.docker.com/engine/reference/builder/#add) (thanks [Matthias](https://twitter.com/uchi_mata) and [Chris](https://www.twitter.com/brompwnie) for their [Blackhat-EU19 talk](https://www.blackhat.com/eu-19/briefings/schedule/#reverse-engineering-and-exploiting-builds-in-the-cloud-17287) ).
+We all know that curl-pipe-sudo-bash is a thing. Many think it is a bad thing. But we all use Docker now so this is not a problem any more...  
+In preparation for a talk I was thinking about ways to attack supply chains in Kubernetes or Docker environments. That was when I remembered when I learned that ADD in Dockerfiles lets you [copy files from remote URLs](https://docs.docker.com/engine/reference/builder/#add) (thanks to [Matthias](https://twitter.com/uchi_mata) and [Chris](https://www.twitter.com/brompwnie) for their [Blackhat-EU19 talk](https://www.blackhat.com/eu-19/briefings/schedule/#reverse-engineering-and-exploiting-builds-in-the-cloud-17287) ).
 
 So I tried to combine the evading techniques for curl-pipe-sudo-bash scenarios with Dockerfile ADD and remote URIs.
 
@@ -29,7 +29,7 @@ docker run -p 1337:80 -d rosenmontag-nginx
 
 ## Victims part
 
-The victim want to use a docker container by a third party. That is why they want to validate the Dockerfile and what is happening inside of it.
+The victim wants to use a docker container by a third party. That is why they want to validate the Dockerfile and what is happening inside of it.
 
 Get sources from Github (you should have done that already)
 ```
@@ -60,7 +60,7 @@ sleep 2
 echo "Done"
 ```
 
-Reassured our victim build the container.
+Reassured our victim builds the container.
 ```
 docker build -t awesome-container-from-rosenmontag:1 .
 ```
@@ -91,8 +91,8 @@ Successfully built a377b993eca5
 Successfully tagged awesome-container-from-rosenmontag:1
 ```
 
-As you can see I echoed debug output to visualize where the attack happend.
-The resulting image now differs from the expectation of the victim. I added additional files to the image and changed the wrapper. I would be able to add a backdoor there.
+As you can see the malicious scriptechos debug output to visualize where the attack happend.  
+The resulting image now differs from the expectation of the victim. The attacker added additional files to the image and changed the wrapper. They would be able to add a backdoor too.
 
 # Explanation of the attack
 
