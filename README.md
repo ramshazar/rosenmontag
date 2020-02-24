@@ -20,7 +20,7 @@ git clone git@github.com:ramshazar/rosenmontag.git
 cd rosenmontag/
 ```
 
-Build the dockerfile of our malicous and let it run
+Build the dockerfile of our malicous nginx and let it run
 ```
 cd malicious-nginx/
 docker build -t rosenmontag-nginx .
