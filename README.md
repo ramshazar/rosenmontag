@@ -12,7 +12,7 @@ So I tried to combine the evading techniques for curl-pipe-sudo-bash scenarios w
 
 ## Attackers part
 
-The attacker want to have a webserver that serves an installer. Depending on the request the webserver will serve a legitimate or a malicious installer.
+The attacker provides a very useful application as a Docker container as open source. They also control a webserver that serves an installer. Depending on the request the webserver will serve a legitimate or a malicious installer.
 
 Get sources from Github
 ```
